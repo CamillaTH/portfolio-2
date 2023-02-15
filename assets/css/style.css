@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+* {
+    margin: 5;
+    padding: 5;
+    border: none;
+}
+
+body {
+    font-family: 'Bangers', cursive, sans-serif;
+    font-size: 1.7rem;
+    color: #FF5733;
+}
+
+footer {
+    clear: both;
+    position: relative;
+    margin-top: 60px;
+}
+
+footer p, a {
+    font-size: 0.9rem;
+    text-align: center;
+    text-decoration:none;
+}
+
+#heading-area {
+    text-align: center;
+}
