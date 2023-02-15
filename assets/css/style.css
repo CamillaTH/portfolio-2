@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
 * {
-    margin: 5;
-    padding: 5;
     border: none;
+    box-sizing: border-box;  
 }
 
 body {
@@ -24,6 +23,47 @@ footer p, a {
     text-decoration:none;
 }
 
-#heading-area {
+#heading-section {
     text-align: center;
+} 
+.game-wrapper::after {
+    content: "";
+    clear: both;
+    display: table;
 }
+
+.player-wrapper, .computer-wrapper {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+
+#player-image, #computer-image {
+    width: 60%;
+}
+
+.button-wrapper button {
+    border-radius: 30px;
+    width: 100px;
+    height: 40px;
+    background-color: #FF5733;
+    color: #ffff;
+    font-family: 'Bangers', cursive, sans-serif;
+    border:solid 1px;
+}
+
+.button-wrapper button:hover {
+    
+    background-color: #ffff;
+    color: #FF5733
+}
+
+
+/* media quires */
+
+@media screen and (max-width: 650px) {
+    .player-wrapper, .computer-wrapper {
+      width: 100%;
+    }
+  }
+
