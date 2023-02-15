@@ -13,18 +13,52 @@ paperBtn.addEventListener("click", displayPlayersChoice("paper"));
 scissorsBtn.addEventListener("click", displayPlayersChoice("scissors"));
 */
 
-function run() {
+function startGame(playersChoice) {
+
     let computerChoice = Math.floor(Math.random() * 3);
+
     if(computerChoice === 0) {
-        //rock
+        //rock, 
+        console.log("computer choose rock")
+        checkWinner(playersChoice, "rock")
     }
     else if(computerChoice === 1) {
         // paper
+        console.log("computer choose paper")
+        checkWinner(playersChoice, "paper")
     }
     else {
         //scissors
+        console.log("computer choose scissors")
+        checkWinner(playersChoice, "scissors")
     }
 
+}
+
+function checkWinner(playersChoice, computerChoice) {
+    
+    if(playersChoice ===  computerChoice)
+    {
+        console.log("tie");
+    }
+    else if(playersChoice === "rock" && computerChoice === "paper") {
+        console.log("computer wins")
+    }
+    else if(playersChoice === "paper" && computerChoice === "scissors") {
+        console.log("player wins")
+    }
+    else if(playersChoice === "scissors" && computerChoice === "rock") {
+        console.log("copmuter wins")
+    }
+    else if(computerChoice === "rock" && playersChoice === "paper") {
+        console.log("computer wins")
+    }
+    else if(computerChoice === "paper" && playersChoice === "scissors") {
+        console.log("player wins")
+    }
+    else if(computerChoice === "scissors" && playersChoice === "rock") {
+        console.log("player wins")
+    }
 }
 
 

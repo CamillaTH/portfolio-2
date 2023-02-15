@@ -7,8 +7,11 @@
 
 body {
     font-family: 'Bangers', cursive, sans-serif;
-    font-size: 1.7rem;
     color: #FF5733;
+}
+
+h1, h2 {
+    font-size: 1.9rem;
 }
 
 footer {
