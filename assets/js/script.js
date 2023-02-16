@@ -1,17 +1,8 @@
 /* declare elements constants */
-const rockBtn = document.getElementById("rock-btn");
-const paperBtn = document.getElementById("paper-btn");
-const scissorsBtn = document.getElementById("scissors-btn");
-const playersPointsDisplayText = document.getElementById("your-points-text");
-const computerPointsDisplayText = document.getElementById("computer-points-text");
 const playersChoiceDisplayText = document.getElementById("player-choice-text");
 const computerChoiceDisplayText = document.getElementById("computer-choice-text");
+const resultDisplayText = document.getElementById("result-text");
 
-/* add event listners 
-rockBtn.addEventListener("click", displayPlayersChoice("rock"));
-paperBtn.addEventListener("click", displayPlayersChoice("paper"));
-scissorsBtn.addEventListener("click", displayPlayersChoice("scissors"));
-*/
 
 /* When player clicks 1 of the 3 buttons this function is called,
  it takes a random nummer from 0-2 to decide what the computer chooses */
@@ -22,21 +13,18 @@ function startGame(playersChoice) {
 
     if(computerChoice === 0) {
         //rock, 
-        console.log("computer choose rock");
         displayPlayersChoice(playersChoiceText);
         displayComputersChoice("Rock");
         checkWinner(playersChoice, 0);
     }
     else if(computerChoice === 1) {
         // paper
-        console.log("computer choose paper")
         displayComputersChoice("paper")
         displayPlayersChoice(playersChoiceText);
         checkWinner(playersChoice, 1);
     }
     else {
         //scissors
-        console.log("computer choose scissors")
         displayComputersChoice("scissors");
         displayPlayersChoice(playersChoiceText);
         checkWinner(playersChoice, 2);
@@ -50,39 +38,45 @@ function checkWinner(playersChoice, computerChoice) {
     //tie
     if(playersChoice ===  computerChoice)
     {
-        console.log("tie");
+        displayResult("Tie");
         return;
     }
     //rock
     if(playersChoice == 0) {
         if(computerChoice === 1) {
-            console.log("computer wins")
+            incrementComputersScore();
+            displayResult("Computer");
             return;
         }
         else {
-            console.log("player wins")
+            incrementPlayersScore();
+            displayResult("Player");
             return;
         }
     }
     //paper
     if(playersChoice === 1) {
         if(computerChoice === 2) {
-            console.log("computer wins")
+            incrementComputersScore();
+            displayResult("Computer");
             return;
         }
         else {
-            console.log("player wins")
+            incrementPlayersScore();
+            displayResult("Player");
             return;
         }
     }
     //scissors
     if(playersChoice == 2) {
         if(computerChoice == 0) {
-            console.log("computer wins")
+            incrementComputersScore();
+            displayResult("Computer");
             return;
         }
         else {
-            console.log("player wins")
+            incrementPlayersScore();
+            displayResult("Player");
             return;
         }
     }
@@ -101,10 +95,20 @@ function displayComputersChoice(choice) {
     computerChoiceDisplayText.textContent  = choice;
 }
 
+/*increment the players score by 1 */
 function incrementPlayersScore() {
-
+    
+    var previousScore = parseInt(document.getElementById("player-points-text").innerText)
+    document.getElementById("player-points-text").innerText = ++previousScore;
 }
 
+/*increment the computers score by 1 */
 function incrementComputersScore() {
+    var previousScore = parseInt(document.getElementById("computer-points-text").innerText)
+    document.getElementById("computer-points-text").innerText = ++previousScore;
+}
 
+/* displays text of the result */
+function displayResult(winner) {
+    resultDisplayText.innerText = winner;
 }

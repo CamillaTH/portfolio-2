@@ -61,8 +61,11 @@ footer p, a {
     color: #FF5733
 }
 
+.winner-text-content {
+    font-size: 1.4rem;
+}
 
-/* media quires */
+/* media qs */
 
 @media screen and (max-width: 650px) {
     .player-wrapper, .computer-wrapper {
