@@ -2,10 +2,10 @@
 const rockBtn = document.getElementById("rock-btn");
 const paperBtn = document.getElementById("paper-btn");
 const scissorsBtn = document.getElementById("scissors-btn");
-const yourPoints = document.getElementById("your-points-text");
-const computerPoints = document.getElementById("computer-points-text");
-const yourChoice = document.getElementById("your-choice-text");
-const computerChoice = document.getElementById("computer-points-text");
+const playersPointsDisplayText = document.getElementById("your-points-text");
+const computerPointsDisplayText = document.getElementById("computer-points-text");
+const playersChoiceDisplayText = document.getElementById("player-choice-text");
+const computerChoiceDisplayText = document.getElementById("computer-choice-text");
 
 /* add event listners 
 rockBtn.addEventListener("click", displayPlayersChoice("rock"));
@@ -13,51 +13,78 @@ paperBtn.addEventListener("click", displayPlayersChoice("paper"));
 scissorsBtn.addEventListener("click", displayPlayersChoice("scissors"));
 */
 
+/* When player clicks 1 of the 3 buttons this function is called,
+ it takes a random nummer from 0-2 to decide what the computer chooses */
 function startGame(playersChoice) {
 
+    var playersChoiceText = playersChoice === 0 ? "rock" : playersChoice === 1 ? "paper" : "scissors";
     let computerChoice = Math.floor(Math.random() * 3);
 
     if(computerChoice === 0) {
         //rock, 
-        console.log("computer choose rock")
-        checkWinner(playersChoice, "rock")
+        console.log("computer choose rock");
+        displayPlayersChoice(playersChoiceText);
+        displayComputersChoice("Rock");
+        checkWinner(playersChoice, 0);
     }
     else if(computerChoice === 1) {
         // paper
         console.log("computer choose paper")
-        checkWinner(playersChoice, "paper")
+        displayComputersChoice("paper")
+        displayPlayersChoice(playersChoiceText);
+        checkWinner(playersChoice, 1);
     }
     else {
         //scissors
         console.log("computer choose scissors")
-        checkWinner(playersChoice, "scissors")
+        displayComputersChoice("scissors");
+        displayPlayersChoice(playersChoiceText);
+        checkWinner(playersChoice, 2);
     }
 
 }
 
+/* compare the yousers and computers choice to decide the winner */
 function checkWinner(playersChoice, computerChoice) {
     
+    //tie
     if(playersChoice ===  computerChoice)
     {
         console.log("tie");
+        return;
     }
-    else if(playersChoice === "rock" && computerChoice === "paper") {
-        console.log("computer wins")
+    //rock
+    if(playersChoice == 0) {
+        if(computerChoice === 1) {
+            console.log("computer wins")
+            return;
+        }
+        else {
+            console.log("player wins")
+            return;
+        }
     }
-    else if(playersChoice === "paper" && computerChoice === "scissors") {
-        console.log("player wins")
+    //paper
+    if(playersChoice === 1) {
+        if(computerChoice === 2) {
+            console.log("computer wins")
+            return;
+        }
+        else {
+            console.log("player wins")
+            return;
+        }
     }
-    else if(playersChoice === "scissors" && computerChoice === "rock") {
-        console.log("copmuter wins")
-    }
-    else if(computerChoice === "rock" && playersChoice === "paper") {
-        console.log("computer wins")
-    }
-    else if(computerChoice === "paper" && playersChoice === "scissors") {
-        console.log("player wins")
-    }
-    else if(computerChoice === "scissors" && playersChoice === "rock") {
-        console.log("player wins")
+    //scissors
+    if(playersChoice == 2) {
+        if(computerChoice == 0) {
+            console.log("computer wins")
+            return;
+        }
+        else {
+            console.log("player wins")
+            return;
+        }
     }
 }
 
@@ -65,13 +92,13 @@ function checkWinner(playersChoice, computerChoice) {
 /* display what the player choosed */
 function displayPlayersChoice(choice) {
     
-    yourChoice.innerText = choice;
+    playersChoiceDisplayText.innerText = choice;
 }
 
 /* display what the computer choosed */
-function displayPlayersChoice(choice) {
+function displayComputersChoice(choice) {
     
-    computerChoice.innerText = choice;
+    computerChoiceDisplayText.textContent  = choice;
 }
 
 function incrementPlayersScore() {
