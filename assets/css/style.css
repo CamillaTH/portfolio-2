@@ -26,7 +26,7 @@ footer p, a {
     text-decoration:none;
 }
 
-#heading-section {
+.heading-section, .mainconent-section {
     text-align: center;
 } 
 .game-wrapper::after {
