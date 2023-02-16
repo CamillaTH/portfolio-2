@@ -8,22 +8,20 @@ const resultDisplayText = document.getElementById("result-text");
  it takes a random nummer from 0-2 to decide what the computer chooses */
 function startGame(playersChoice) {
 
-    var playersChoiceText = playersChoice === 0 ? "rock" : playersChoice === 1 ? "paper" : "scissors";
+    let playersChoiceText = playersChoice === 0 ? "rock" : playersChoice === 1 ? "paper" : "scissors";
     let computerChoice = Math.floor(Math.random() * 3);
 
-    if(computerChoice === 0) {
+    if (computerChoice === 0) {
         //rock, 
         displayPlayersChoice(playersChoiceText);
         displayComputersChoice("Rock");
         checkWinner(playersChoice, 0);
-    }
-    else if(computerChoice === 1) {
+    } else if (computerChoice === 1) {
         // paper
         displayComputersChoice("paper")
         displayPlayersChoice(playersChoiceText);
         checkWinner(playersChoice, 1);
-    }
-    else {
+    } else {
         //scissors
         displayComputersChoice("scissors");
         displayPlayersChoice(playersChoiceText);
@@ -34,47 +32,43 @@ function startGame(playersChoice) {
 
 /* compare the yousers and computers choice to decide the winner */
 function checkWinner(playersChoice, computerChoice) {
-    
+
     //tie
-    if(playersChoice ===  computerChoice)
-    {
+    if (playersChoice === computerChoice) {
         displayResult("Tie");
         return;
     }
     //rock
-    if(playersChoice == 0) {
-        if(computerChoice === 1) {
+    if (playersChoice === 0) {
+        if (computerChoice === 1) {
             incrementComputersScore();
             displayResult("Computer");
             return;
-        }
-        else {
+        } else {
             incrementPlayersScore();
             displayResult("Player");
             return;
         }
     }
     //paper
-    if(playersChoice === 1) {
-        if(computerChoice === 2) {
+    if (playersChoice === 1) {
+        if (computerChoice === 2) {
             incrementComputersScore();
             displayResult("Computer");
             return;
-        }
-        else {
+        } else {
             incrementPlayersScore();
             displayResult("Player");
             return;
         }
     }
     //scissors
-    if(playersChoice == 2) {
-        if(computerChoice == 0) {
+    if (playersChoice === 2) {
+        if (computerChoice === 0) {
             incrementComputersScore();
             displayResult("Computer");
             return;
-        }
-        else {
+        } else {
             incrementPlayersScore();
             displayResult("Player");
             return;
@@ -85,26 +79,26 @@ function checkWinner(playersChoice, computerChoice) {
 
 /* display what the player choosed */
 function displayPlayersChoice(choice) {
-    
+
     playersChoiceDisplayText.innerText = choice;
 }
 
 /* display what the computer choosed */
 function displayComputersChoice(choice) {
-    
-    computerChoiceDisplayText.textContent  = choice;
+
+    computerChoiceDisplayText.textContent = choice;
 }
 
 /*increment the players score by 1 */
 function incrementPlayersScore() {
-    
-    var previousScore = parseInt(document.getElementById("player-points-text").innerText)
+
+    let previousScore = parseInt(document.getElementById("player-points-text").innerText);
     document.getElementById("player-points-text").innerText = ++previousScore;
 }
 
 /*increment the computers score by 1 */
 function incrementComputersScore() {
-    var previousScore = parseInt(document.getElementById("computer-points-text").innerText)
+    let previousScore = parseInt(document.getElementById("computer-points-text").innerText);
     document.getElementById("computer-points-text").innerText = ++previousScore;
 }
 
