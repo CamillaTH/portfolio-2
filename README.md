@@ -40,6 +40,9 @@ site is live at : https://camillath.github.io/portfolio-2/
 
 Inspiration taken from code insitutes rock papper scissors game.
 
+<b>Bugs:</b>
+
+When site deployed i discovered that the favicon not shown someting with the path is wrong.
 
 <b>Run program instructions:</b>
 
