@@ -33,7 +33,9 @@ function startGame(playersChoice) {
     {
         /* Show user that the user is the winner */
         document.getElementById("total-winner-result-text").innerText = "User Wins!";
-        /* Add class that starts blinking animation  */
+        /* disable buttons until game is restarted */
+        enableDisableButtons(true);
+        /* Add class that starts blinking animation  */       
         document.getElementById("total-winner-result-text").classList.add("blink");
         /* Set timeout of 5 sec until the game is restarted */
         setTimeout(restartGame, 5000);
@@ -42,6 +44,8 @@ function startGame(playersChoice) {
     {
         /* Show user that the computer is the winner */
         document.getElementById("total-winner-result-text").innerText = "Computer Wins!";
+        /* disable buttons until game is restarted */
+        enableDisableButtons(true);
         /* Add class that starts blinking animation  */
         document.getElementById("total-winner-result-text").classList.add("blink");
         /* Set timeout of 5 sec until the game is restarted */
@@ -131,4 +135,13 @@ function restartGame() {
     document.getElementById("player-points-text").innerText = 0;
     document.getElementById("total-winner-result-text").innerText = ""
     document.getElementById("total-winner-result-text").classList.remove("blink");
+    /* enable buttons when game is restarted */
+    enableDisableButtons(false);
+}
+
+/* enables or disables players choice buttons */
+function enableDisableButtons(isDisabled) {
+    document.getElementById('rock-btn').disabled = isDisabled;
+    document.getElementById('paper-btn').disabled = isDisabled;
+    document.getElementById('scissors-btn').disabled = isDisabled;
 }
