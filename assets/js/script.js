@@ -1,8 +1,10 @@
 /* declare elements constants */
 const playersChoiceDisplayText = document.getElementById("player-choice-text");
 const computerChoiceDisplayText = document.getElementById("computer-choice-text");
-const resultDisplayText = document.getElementById("result-text");
+const resultDisplayText = document.getElementById("result-text"); 
+const countdownElem = document.getElementById('#timer-text');
 
+let counter = 30;
 
 /* When player clicks 1 of the 3 buttons this function is called,
  it takes a random nummer from 0-2 to decide what the computer chooses */
@@ -27,7 +29,23 @@ function startGame(playersChoice) {
         displayPlayersChoice(playersChoiceText);
         checkWinner(playersChoice, 2);
     }
-
+    let userScore = parseInt(document.getElementById("player-points-text").innerText);
+    let computerScore = parseInt(document.getElementById("computer-points-text").innerText);
+    /* Check if user or computer have won the game (first to 10) */
+    if(userScore == 10)
+    {
+        /* Show user that the user is the winner */
+        document.getElementById("total-winner-result-text").innerText = "User Wins!"
+        /* Set timeout of 5 sec until the game is restarted */
+        setTimeout(restartGame, 5000);
+    }
+    else if(computerScore == 10)
+    {
+        /* Show user that the computer is the winner */
+        document.getElementById("total-winner-result-text").innerText = "Computer Wins!"
+        /* Set timeout of 5 sec until the game is restarted */
+        setTimeout(restartGame, 5000);
+    }
 }
 
 /* compare the yousers and computers choice to decide the winner */
@@ -105,4 +123,10 @@ function incrementComputersScore() {
 /* displays text of the result */
 function displayResult(winner) {
     resultDisplayText.innerText = winner;
+}
+
+function restartGame() {
+    document.getElementById("computer-points-text").innerText = 0;
+    document.getElementById("player-points-text").innerText = 0;
+    document.getElementById("total-winner-result-text").innerText = ""
 }
