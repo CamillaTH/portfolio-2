@@ -4,8 +4,6 @@ const computerChoiceDisplayText = document.getElementById("computer-choice-text"
 const resultDisplayText = document.getElementById("result-text"); 
 const countdownElem = document.getElementById('#timer-text');
 
-let counter = 30;
-
 /* When player clicks 1 of the 3 buttons this function is called,
  it takes a random nummer from 0-2 to decide what the computer chooses */
 function startGame(playersChoice) {
