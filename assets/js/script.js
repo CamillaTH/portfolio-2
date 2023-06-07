@@ -36,6 +36,7 @@ function startGame(playersChoice) {
     {
         /* Show user that the user is the winner */
         document.getElementById("total-winner-result-text").innerText = "User Wins!";
+        /* Add class that starts blinking animation  */
         document.getElementById("total-winner-result-text").classList.add("blink");
         /* Set timeout of 5 sec until the game is restarted */
         setTimeout(restartGame, 5000);
@@ -44,8 +45,9 @@ function startGame(playersChoice) {
     {
         /* Show user that the computer is the winner */
         document.getElementById("total-winner-result-text").innerText = "Computer Wins!";
-        /* Set timeout of 5 sec until the game is restarted */
+        /* Add class that starts blinking animation  */
         document.getElementById("total-winner-result-text").classList.add("blink");
+        /* Set timeout of 5 sec until the game is restarted */
         setTimeout(restartGame, 5000);
     }
 }
