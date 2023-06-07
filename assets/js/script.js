@@ -35,15 +35,17 @@ function startGame(playersChoice) {
     if(userScore == 10)
     {
         /* Show user that the user is the winner */
-        document.getElementById("total-winner-result-text").innerText = "User Wins!"
+        document.getElementById("total-winner-result-text").innerText = "User Wins!";
+        document.getElementById("total-winner-result-text").classList.add("blink");
         /* Set timeout of 5 sec until the game is restarted */
         setTimeout(restartGame, 5000);
     }
     else if(computerScore == 10)
     {
         /* Show user that the computer is the winner */
-        document.getElementById("total-winner-result-text").innerText = "Computer Wins!"
+        document.getElementById("total-winner-result-text").innerText = "Computer Wins!";
         /* Set timeout of 5 sec until the game is restarted */
+        document.getElementById("total-winner-result-text").classList.add("blink");
         setTimeout(restartGame, 5000);
     }
 }
@@ -129,4 +131,5 @@ function restartGame() {
     document.getElementById("computer-points-text").innerText = 0;
     document.getElementById("player-points-text").innerText = 0;
     document.getElementById("total-winner-result-text").innerText = ""
+    document.getElementById("total-winner-result-text").classList.remove("blink");
 }

@@ -66,6 +66,23 @@ footer p, a {
     font-size: 1.6rem;
 }
 
+/* blinking animation  */
+.blink {
+    animation: blinking-animation 0.3s steps(2, start) infinite;
+    -webkit-animation: blinking-animation 0.3s steps(2, start) infinite;
+}
+
+@keyframes blinking-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blinking-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+
 /* media qs */
 
 @media screen and (max-width: 650px) {
