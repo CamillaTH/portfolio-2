@@ -139,9 +139,14 @@ function restartGame() {
     document.getElementById("total-winner-result-text").innerText = ""
     /* clear round winner value */
     document.getElementById("result-text").innerText = ""
+    /* clear round choice player */
+    playersChoiceDisplayText.innerText = ""
+    /* clear round choice computer */
+    computerChoiceDisplayText.innerText = ""
     /* remove blink animation class */
     document.getElementById("total-winner-result-text").classList.remove("blink");
     /* enable buttons when game is restarted */
+    computerChoiceDisplayText
     enableDisableButtons(false);
 }
 
