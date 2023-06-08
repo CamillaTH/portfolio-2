@@ -131,9 +131,15 @@ function displayResult(winner) {
 }
 
 function restartGame() {
+    /* reset computers points */
     document.getElementById("computer-points-text").innerText = 0;
+    /* reset players points */
     document.getElementById("player-points-text").innerText = 0;
+    /* clear total winner value */
     document.getElementById("total-winner-result-text").innerText = ""
+    /* clear round winner value */
+    document.getElementById("result-text").innerText = ""
+    /* remove blink animation class */
     document.getElementById("total-winner-result-text").classList.remove("blink");
     /* enable buttons when game is restarted */
     enableDisableButtons(false);
