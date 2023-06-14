@@ -66,6 +66,10 @@ footer p, a {
     pointer-events: none;
 }
 
+.button-disabled {
+    background-color: #D3D3D3!important;
+}
+
 .total-winner-text-content {
     font-size: 1.6rem;
 }

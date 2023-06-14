@@ -3,6 +3,9 @@ const playersChoiceDisplayText = document.getElementById("player-choice-text");
 const computerChoiceDisplayText = document.getElementById("computer-choice-text");
 const resultDisplayText = document.getElementById("result-text"); 
 const buttonWrapper = document.getElementById("btn-wrapper");
+const rockButton = document.getElementById('rock-btn');
+const paperButton = document.getElementById('paper-btn');
+const scissors = document.getElementById('scissors-btn');
 
 /* When player clicks 1 of the 3 buttons this function is called,
  it takes a random nummer from 0-2 to decide what the computer chooses */
@@ -157,9 +160,19 @@ function restartGame() {
     enableDisableButtons(false);
 }
 
-/* enables or disables players choice buttons */
+/* enables or disables players choice buttons, add disabled style to btns */
 function enableDisableButtons(isDisabled) {
-    document.getElementById('rock-btn').disabled = isDisabled;
-    document.getElementById('paper-btn').disabled = isDisabled;
-    document.getElementById('scissors-btn').disabled = isDisabled;
+    rockButton.disabled = isDisabled;
+    paperButton.disabled = isDisabled;
+    scissors.disabled = isDisabled;
+    if(isDisabled){
+        rockButton.classList.add("button-disabled")
+        paperButton.classList.add("button-disabled")
+        scissors.classList.add("button-disabled")
+    }
+    else{
+        rockButton.classList.remove("button-disabled")
+        paperButton.classList.remove("button-disabled")
+        scissors.classList.remove("button-disabled")
+    }
 }
