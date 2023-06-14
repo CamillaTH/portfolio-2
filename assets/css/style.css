@@ -74,6 +74,10 @@ footer p, a {
     font-size: 1.6rem;
 }
 
+.inherit-font {
+    font-size: inherit;
+}
+
 /* blinking animation  */
 .blink {
     animation: blinking-animation 0.3s steps(2, start) infinite;
