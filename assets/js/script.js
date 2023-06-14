@@ -6,6 +6,8 @@ const buttonWrapper = document.getElementById("btn-wrapper");
 const rockButton = document.getElementById('rock-btn');
 const paperButton = document.getElementById('paper-btn');
 const scissors = document.getElementById('scissors-btn');
+const playerPointsText = document.getElementById("player-points-text");
+const computerPointsText = document.getElementById("computer-points-text");
 
 /* When player clicks 1 of the 3 buttons this function is called,
  it takes a random nummer from 0-2 to decide what the computer chooses */
@@ -30,8 +32,8 @@ function startGame(playersChoice) {
         displayPlayersChoice(playersChoiceText);
         checkWinner(playersChoice, 2);
     }
-    let userScore = parseInt(document.getElementById("player-points-text").innerText);
-    let computerScore = parseInt(document.getElementById("computer-points-text").innerText);
+    let userScore = parseInt(playerPointsText.innerText);
+    let computerScore = parseInt(computerPointsText.innerText);
    
     /* Check if user or computer have won the game (first to 10) */
     if(userScore == 10)
@@ -124,14 +126,14 @@ function displayComputersChoice(choice) {
 /*increment the players score by 1 */
 function incrementPlayersScore() {
 
-    let previousScore = parseInt(document.getElementById("player-points-text").innerText);
-    document.getElementById("player-points-text").innerText = ++previousScore;
+    let previousScore = parseInt(playerPointsText.innerText);
+    playerPointsText.innerText = ++previousScore;
 }
 
 /*increment the computers score by 1 */
 function incrementComputersScore() {
-    let previousScore = parseInt(document.getElementById("computer-points-text").innerText);
-    document.getElementById("computer-points-text").innerText = ++previousScore;
+    let previousScore = parseInt(computerPointsText.innerText);
+    computerPointsText.innerText = ++previousScore;
 }
 
 /* displays text of the result */
@@ -141,9 +143,9 @@ function displayResult(winner) {
 
 function restartGame() {
     /* reset computers points */
-    document.getElementById("computer-points-text").innerText = 0;
+    computerPointsText.innerText = 0;
     /* reset players points */
-    document.getElementById("player-points-text").innerText = 0;
+    playerPointsText.innerText = 0;
     /* clear total winner value */
     document.getElementById("total-winner-result-text").innerText = ""
     /* clear round winner value */
