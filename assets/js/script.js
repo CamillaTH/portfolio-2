@@ -2,6 +2,7 @@
 const playersChoiceDisplayText = document.getElementById("player-choice-text");
 const computerChoiceDisplayText = document.getElementById("computer-choice-text");
 const resultDisplayText = document.getElementById("result-text"); 
+const buttonWrapper = document.getElementById("btn-wrapper");
 
 /* When player clicks 1 of the 3 buttons this function is called,
  it takes a random nummer from 0-2 to decide what the computer chooses */
@@ -28,6 +29,7 @@ function startGame(playersChoice) {
     }
     let userScore = parseInt(document.getElementById("player-points-text").innerText);
     let computerScore = parseInt(document.getElementById("computer-points-text").innerText);
+   
     /* Check if user or computer have won the game (first to 10) */
     if(userScore == 10)
     {
@@ -37,6 +39,8 @@ function startGame(playersChoice) {
         enableDisableButtons(true);
         /* Add class that starts blinking animation  */       
         document.getElementById("total-winner-result-text").classList.add("blink");
+        /* add clas that disables hover effect on buttons */
+        buttonWrapper.classList.add("disable-hover");
         /* Set timeout of 5 sec until the game is restarted */
         setTimeout(restartGame, 5000);
     }
@@ -48,6 +52,8 @@ function startGame(playersChoice) {
         enableDisableButtons(true);
         /* Add class that starts blinking animation  */
         document.getElementById("total-winner-result-text").classList.add("blink");
+        /* add clas that disables hover effect on buttons */
+        buttonWrapper.classList.add("disable-hover");
         /* Set timeout of 5 sec until the game is restarted */
         setTimeout(restartGame, 5000);
     }
@@ -145,8 +151,9 @@ function restartGame() {
     computerChoiceDisplayText.innerText = ""
     /* remove blink animation class */
     document.getElementById("total-winner-result-text").classList.remove("blink");
+    /* remove disable hover class */
+    buttonWrapper.classList.remove("disable-hover");
     /* enable buttons when game is restarted */
-    computerChoiceDisplayText
     enableDisableButtons(false);
 }
 

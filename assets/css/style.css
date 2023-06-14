@@ -62,6 +62,10 @@ footer p, a {
     color: #FF5733
 }
 
+.disable-hover {
+    pointer-events: none;
+}
+
 .total-winner-text-content {
     font-size: 1.6rem;
 }
