@@ -120,7 +120,8 @@ Responsiveness was tested to use of https://ui.dev/amiresponsive and https://res
  Expected result: Total Winner h2 should display "User Wins!" and buttons should be disabled and hidden for 5 sec. After 5 sec all values should be reset and buttons enabled and not hidden.
  
  Result: result as expected.
----
+
+
 * Computer points is 10
  
  Expected result: Total Winner h2 should display "Computer Wins!" and buttons should be disabled and hidden for 5 sec. After 5 sec all values should be reset and buttons enabled and not hidden.
@@ -134,49 +135,55 @@ Responsiveness was tested to use of https://ui.dev/amiresponsive and https://res
 Expected result: Neighter user score or computer score should be incremented by 1 and "Winner of round:" label should display "tie".
 
 Result: result as expected.
----
+
+
 * User choose Rock and computer choose Paper.
 
 Expected result: Computer score should be incremented by 1 and "Winner of round:" label should display "Computer".
 
 Result: result as expected.
----
+
+
 * User choose Rock and computer choose scissors.
 
 Expected result: User score should be incremented by 1 and "Winner of round:" label should display "Player".
 
 Result: result as expected.
----
+
+
 * User choose Paper and computer choose paper.
 
 Expected result: Neighter user score or computer score should be incremented by 1 and "Winner of round:" label should display "tie".
 
 Result: result as expected.
----
+
+
 * User choose Paper and computer choose rock.
 
 Expected result: User score should be incremented by 1 and "Winner of round:" label should display "Player".
 
 Result: result as expected.
----
+
+
 * User choose Paper and computer choose scissors.
 
 Expected result: Computer score should be incremented by 1 and "Winner of round:" label should display "Computer".
 
 Result: result as expected.
----
+
+
 * User choose scissors and computer choose scissors.
 
 Expected result: Neighter user score or computer score should be incremented by 1 and "Winner of round:" label should display "tie".
 
 Result: result as expected.
----
+
+
 * User choose scissors and computer choose paper.
 
 Expected result: User score should be incremented by 1 and "Winner of round:" label should display "Player".
 
 Result: result as expected.
----
 
 * User choose scissors and computer choose rock.
 
