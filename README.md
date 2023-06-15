@@ -51,29 +51,46 @@ A text with the creator and a link to the github repo.
 ![alt tex](assets/images/footerSectionReadme.png)
 
 
-<b>Lighthouse score</b>
+### Unimplemented Features
 
-<img src="assets/images/portfolio2lighthousescore.png" alt="lighthousereport" title="lighthousereport">
+Instead of using stataic images show and image of eighter a rock paper or a scissor based on what the user/computer choosed for the current round.
 
-<b>Validator Testing</b>
 
-no bugs at the validator tool for html css and js (jslint)
+## Testing
 
-<b>Deployment</b>
+### Lighthouse score 
+
+![alt text](assets/images/portfolio2lighthousescore.png)
+
+### Validator Testing
+
+* HTML
+   No errors were found when code was injected into the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcode-institute-org.github.io%2Flove-running-2.0%2Findex.html)
+* CSS
+   No errors were found when code was injected into the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fcode-institute-org.github.io%252Flove-running-2.0%252Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#css)
+
+### Bugs
+
+No bugs where discovered.
+
+## Deployment
 
 site is live at : https://camillath.github.io/portfolio-2/
 
-<b>credit:</b>
+Steps to deploy: 
+ * On the github repository go to the settings tab
+ * Navigate to the source section drop down and select the master branch
+ * When master branch i selected, the page will be refreshed automatically with details that indicates a successful deploy
+
+ To run the site locally from gitpod: 
+ * Navigate to the gitpod terminal
+ * In the terminal write: "python -m http.server 8000"
+ * An popup appears in the bottom right corner "click open in browser"
+
+
+## Credits
 
 Inspiration taken from code insitutes rock papper scissors game.
 
 For blinking effect this guide was used
 https://www.w3docs.com/snippets/css/how-to-create-a-blinking-effect-with-css3-animations.html
-
-<b>Bugs:</b>
-
-When site deployed i discovered that the favicon not shown someting with the path is wrong.
-
-<b>Run program instructions:</b>
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
