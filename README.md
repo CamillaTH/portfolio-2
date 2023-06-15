@@ -1,24 +1,35 @@
-<b>Rock Paper, Scissors Game!</b>
+# Rock Paper Scissors Game
 
-<b>Devices:</b>
+![alt text](assets/images/portfolio2responsiveimage.png)
 
-<img src="assets/images/portfolio2responsiveimage.png" alt="responsive" title="responsive">
 
-<b>The header:</b>
+## Features 
+
+### Exsiting Features
  
+
+ 
+__Header__
+
  a header with the two h tags with the name of the game and some pep text.
 
-<b>main content:</b>
+![alt text](assets/images/headerReadme.png)
 
-<img src="assets/images/readmeButtons.png" alt="responsive" title="responsive">
+__Button area__
+
+![alt text](assets/images/readmeButtons.png)
+
  Three buttons with the three different choices rock, paper or scissors.
  Two images representing the player and the computer.
  a text that diplay the winner of each round.
  2 texts that display the points for the player and computer.
 
-<b>The footer:</b>
+__Footer__
 
 a text with the creator and a link to the github repo.
+
+![alt tex](assets/images/footerSectionReadme.png)
+
 
 <b>Features:</b>
 
@@ -39,6 +50,9 @@ site is live at : https://camillath.github.io/portfolio-2/
 <b>credit:</b>
 
 Inspiration taken from code insitutes rock papper scissors game.
+
+For blinking effect this guide was used
+https://www.w3docs.com/snippets/css/how-to-create-a-blinking-effect-with-css3-animations.html
 
 <b>Bugs:</b>
 
