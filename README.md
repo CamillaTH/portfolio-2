@@ -70,6 +70,7 @@ Instead of using stataic images show and image of eighter a rock paper or a scis
 * JS validation: Javascript validation using https://jshint.com (alot of missing semicolons where detected and fixed)
 * JS format: Fixed formating of Js code using https://beautifier.io
 * Contrast: Test contrast using https://wave.webaim.org/ tool resulted in change of background color and change color of buttons.
+![alt text](assets/images/readme/waveValidationReadme.png)
 
 ### Responsvie testing 
     
