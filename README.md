@@ -87,10 +87,106 @@ Responsiveness was tested to use of https://ui.dev/amiresponsive and https://res
 * Iphone 6:
 ![alt text](assets/images/readme/responsiveCheckIphone6Readme.png)
 
+### Manual testing
+
+#### Rock button test 
+
+* User click Rock button.
+ 
+ Expected result:  "You choose:" label should display "Rock".
+ 
+ Result: "Rock".
+
+#### Paper button test 
+
+* User click Paper button.
+
+ Expected result:  "You choose:" label should display "Paper". 
+ 
+ Result: "Paper".
+
+#### Scissors button test 
+
+* User click Paper button.
+ 
+ Expected result:  "You choose:" label should display "scissors".
+
+ Result: "scissors".
+
+#### Winner logic test:
+
+* User points is 10
+ 
+ Expected result: Total Winner h2 should display "User Wins!" and buttons should be disabled and hidden for 5 sec. After 5 sec all values should be reset and buttons enabled and not hidden.
+ 
+ Result: result as expected.
+---
+* Computer points is 10
+ 
+ Expected result: Total Winner h2 should display "Computer Wins!" and buttons should be disabled and hidden for 5 sec. After 5 sec all values should be reset and buttons enabled and not hidden.
+ 
+ Result: result as expected.
+
+#### Round Winner logic
+
+* User choose Rock and computer choose Rock.
+
+Expected result: Neighter user score or computer score should be incremented by 1 and "Winner of round:" label should display "tie".
+
+Result: result as expected.
+---
+* User choose Rock and computer choose Paper.
+
+Expected result: Computer score should be incremented by 1 and "Winner of round:" label should display "Computer".
+
+Result: result as expected.
+---
+* User choose Rock and computer choose scissors.
+
+Expected result: User score should be incremented by 1 and "Winner of round:" label should display "Player".
+
+Result: result as expected.
+---
+* User choose Paper and computer choose paper.
+
+Expected result: Neighter user score or computer score should be incremented by 1 and "Winner of round:" label should display "tie".
+
+Result: result as expected.
+---
+* User choose Paper and computer choose rock.
+
+Expected result: User score should be incremented by 1 and "Winner of round:" label should display "Player".
+
+Result: result as expected.
+---
+* User choose Paper and computer choose scissors.
+
+Expected result: Computer score should be incremented by 1 and "Winner of round:" label should display "Computer".
+
+Result: result as expected.
+---
+* User choose scissors and computer choose scissors.
+
+Expected result: Neighter user score or computer score should be incremented by 1 and "Winner of round:" label should display "tie".
+
+Result: result as expected.
+---
+* User choose scissors and computer choose paper.
+
+Expected result: User score should be incremented by 1 and "Winner of round:" label should display "Player".
+
+Result: result as expected.
+---
+
+* User choose scissors and computer choose rock.
+
+Expected result: Computer score should be incremented by 1 and "Winner of round:" label should display "Computer".
+
+Result: result as expected.
 
 ### Bugs
 
-No bugs where discovered.
+Bugs where discovered during development but fixed. Ex when trying to declare constant of "total-winner-result-text" span by using document.getElementById() built in function the constant was undefined since the span element did not have an id.
 
 ## Deployment
 
@@ -130,3 +226,4 @@ https://www.w3docs.com/snippets/css/how-to-create-a-blinking-effect-with-css3-an
 https://cloudconvert.com/ico-converter tool was used.
 * Link to png image that i used (converted it with tool above to .ico format) https://www.pngkit.com/view/u2w7w7o0i1t4r5r5_rock-paper-scissors-png-clipart-rock-paper-scissors/
 * To make images transparent https://www.remove.bg/ tool was used
+* Background image link was not found since i did not save it when i started the project.
