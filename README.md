@@ -234,3 +234,4 @@ https://cloudconvert.com/ico-converter tool was used.
 * Link to png image that i used (converted it with tool above to .ico format) https://www.pngkit.com/png/detail/207-2077319_rock-paper-scissors-png-clipart-rock-paper-scissors.png
 * To make images transparent https://www.remove.bg/ tool was used
 * Background image link https://play-lh.googleusercontent.com/-2iffwzxEWvwDYqt5JxZqXdxxl2XwWBNZa7S_0KxRC721C2PhzFYW-q6U3o9N6OiUUw
+* Inspiration of js was taken from https://www.codewizardshq.com/javascript-tutorial-for-kids-rock-paper-scissors/ 
