@@ -231,6 +231,6 @@ Inspiration taken from code insitutes rock papper scissors game made by code ins
 https://www.w3docs.com/snippets/css/how-to-create-a-blinking-effect-with-css3-animations.html
 * For to convert an png image to favicon (.ico format) 
 https://cloudconvert.com/ico-converter tool was used.
-* Link to png image that i used (converted it with tool above to .ico format) https://www.pngkit.com/view/u2w7w7o0i1t4r5r5_rock-paper-scissors-png-clipart-rock-paper-scissors/
+* Link to png image that i used (converted it with tool above to .ico format) https://www.pngkit.com/png/detail/207-2077319_rock-paper-scissors-png-clipart-rock-paper-scissors.png
 * To make images transparent https://www.remove.bg/ tool was used
-* Background image link was not found since i did not save it when i started the project.
+* Background image link https://play-lh.googleusercontent.com/-2iffwzxEWvwDYqt5JxZqXdxxl2XwWBNZa7S_0KxRC721C2PhzFYW-q6U3o9N6OiUUw
