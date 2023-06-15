@@ -69,6 +69,7 @@ Instead of using stataic images show and image of eighter a rock paper or a scis
    No errors were found when code was injected into the official https://jigsaw.w3.org/css-validator
 * JS validation: Javascript validation using https://jshint.com (alot of missing semicolons where detected and fixed)
 * JS format: Fixed formating of Js code using https://beautifier.io
+* Contrast: Test contrast using https://wave.webaim.org/ tool resulted in change of background color and change color of buttons.
 
 ### Responsvie testing 
     
