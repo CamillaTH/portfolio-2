@@ -38,6 +38,12 @@ __Score area__
 
 ![alt text](assets/images/scoreSectionReadme.png)
 
+__Image area__
+
+Two images displaying 2 fists to enhance to show the user whats the game is about. Also showing what the user have choosed and what computer choosed for the current round.
+
+![alt text](assets/images/scoreSectionReadme.png)
+
 __Footer__
 
 A text with the creator and a link to the github repo.
