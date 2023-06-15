@@ -101,6 +101,14 @@ footer p, a {
     .player-wrapper, .computer-wrapper {
       width: 100%;
     }
+
+    .heading-section {
+        padding-top: 5px;
+    }
+
+    .button-wrapper button {
+        width: 90px;
+        height: 35px;
   }
 
 
