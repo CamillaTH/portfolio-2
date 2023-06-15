@@ -51,14 +51,14 @@ footer p, a {
     width: 100px;
     height: 40px;
     background-color: #FF5733;
-    color: #ffff;
+    color: #000000;
     font-family: 'Bangers', cursive, sans-serif;
     border:solid 1px;
 }
 
 .button-wrapper button:hover {
     
-    background-color: #ffff;
+    background-color: #000000;
     color: #FF5733
 }
 
@@ -67,7 +67,7 @@ footer p, a {
 }
 
 .button-disabled {
-    background-color: #D3D3D3!important;
+    background-color: #000000!important;
 }
 
 .total-winner-text-content {
