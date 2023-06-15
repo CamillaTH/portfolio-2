@@ -1,7 +1,7 @@
 /* declare elements constants */
 const playersChoiceDisplayText = document.getElementById("player-choice-text");
 const computerChoiceDisplayText = document.getElementById("computer-choice-text");
-const roundResultDisplayText = document.getElementById("round-result-text"); 
+const roundResultDisplayText = document.getElementById("round-result-text");
 const buttonWrapper = document.getElementById("btn-wrapper");
 const rockButton = document.getElementById('rock-btn');
 const paperButton = document.getElementById('paper-btn');
@@ -18,7 +18,7 @@ function startGame(playersChoice) {
     let computerChoice = Math.floor(Math.random() * 3);
 
     if (computerChoice === 0) {
-        //rock, 
+        //rock
         displayPlayersChoice(playersChoiceText);
         displayComputersChoice("Rock");
         checkWinner(playersChoice, 0);
@@ -35,23 +35,20 @@ function startGame(playersChoice) {
     }
     let userScore = parseInt(playerPointsTxt.innerText);
     let computerScore = parseInt(computerPointsTxt.innerText);
-   
+
     /* Check if user or computer have won the game (first to 10) */
-    if(userScore == 10)
-    {
+    if (userScore == 10) {
         /* Show user that the user is the winner */
         totalWinnerResultTxt.innerText = "User Wins!";
         /* disable buttons until game is restarted */
         enableDisableButtons(true);
-        /* Add class that starts blinking animation  */       
+        /* Add class that starts blinking animation  */
         totalWinnerResultTxt.classList.add("blink");
         /* add clas that disables hover effect on buttons */
         buttonWrapper.classList.add("disable-hover");
         /* Set timeout of 5 sec until the game is restarted */
         setTimeout(restartGame, 5000);
-    }
-    else if(computerScore == 10)
-    {
+    } else if (computerScore == 10) {
         /* Show user that the computer is the winner */
         totalWinnerResultTxt.innerText = "Computer Wins!";
         /* disable buttons until game is restarted */
@@ -168,12 +165,11 @@ function enableDisableButtons(isDisabled) {
     rockButton.disabled = isDisabled;
     paperButton.disabled = isDisabled;
     scissors.disabled = isDisabled;
-    if(isDisabled){
+    if (isDisabled) {
         rockButton.classList.add("button-disabled");
         paperButton.classList.add("button-disabled");
         scissors.classList.add("button-disabled");
-    }
-    else{
+    } else {
         rockButton.classList.remove("button-disabled");
         paperButton.classList.remove("button-disabled");
         scissors.classList.remove("button-disabled");
