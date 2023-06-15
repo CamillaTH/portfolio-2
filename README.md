@@ -16,7 +16,7 @@ __Header__
 
 __Button area__
 
-![alt text](assets/images/readme/readmeButtons.png)
+![alt text](assets/images/readme/buttonsReadme.png)
 
  Three buttons with the three different choices rock, paper or scissors.
  Two images representing the player and the computer.
