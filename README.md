@@ -63,10 +63,12 @@ Instead of using stataic images show and image of eighter a rock paper or a scis
 
 ### Validator Testing
 
-* HTML
-   No errors were found when code was injected into the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcode-institute-org.github.io%2Flove-running-2.0%2Findex.html)
-* CSS
-   No errors were found when code was injected into the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fcode-institute-org.github.io%252Flove-running-2.0%252Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#css)
+* HTML:
+   No errors were found when code was injected into the official (https://validator.w3.org/)
+* CSS:
+   No errors were found when code was injected into the official https://jigsaw.w3.org/css-validator
+* JS validation: Javascript validation using https://jshint.com (alot of missing semicolons where detected and fixed)
+* JS format: Fixed formating of Js code using https://beautifier.io
 
 ### Responsvie testing 
     

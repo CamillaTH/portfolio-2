@@ -24,7 +24,7 @@ function startGame(playersChoice) {
         checkWinner(playersChoice, 0);
     } else if (computerChoice === 1) {
         // paper
-        displayComputersChoice("paper")
+        displayComputersChoice("paper");
         displayPlayersChoice(playersChoiceText);
         checkWinner(playersChoice, 1);
     } else {
@@ -148,13 +148,13 @@ function restartGame() {
     /* reset players points */
     playerPointsTxt.innerText = 0;
     /* clear total winner value */
-    totalWinnerResultTxt.innerText = ""
+    totalWinnerResultTxt.innerText = "";
     /* clear round winner value */
-    roundResultDisplayText.innerText = ""
+    roundResultDisplayText.innerText = "";
     /* clear round choice player */
-    playersChoiceDisplayText.innerText = ""
+    playersChoiceDisplayText.innerText = "";
     /* clear round choice computer */
-    computerChoiceDisplayText.innerText = ""
+    computerChoiceDisplayText.innerText = "";
     /* remove blink animation class */
     totalWinnerResultTxt.classList.remove("blink");
     /* remove disable hover class */
@@ -169,13 +169,13 @@ function enableDisableButtons(isDisabled) {
     paperButton.disabled = isDisabled;
     scissors.disabled = isDisabled;
     if(isDisabled){
-        rockButton.classList.add("button-disabled")
-        paperButton.classList.add("button-disabled")
-        scissors.classList.add("button-disabled")
+        rockButton.classList.add("button-disabled");
+        paperButton.classList.add("button-disabled");
+        scissors.classList.add("button-disabled");
     }
     else{
-        rockButton.classList.remove("button-disabled")
-        paperButton.classList.remove("button-disabled")
-        scissors.classList.remove("button-disabled")
+        rockButton.classList.remove("button-disabled");
+        paperButton.classList.remove("button-disabled");
+        scissors.classList.remove("button-disabled");
     }
 }
